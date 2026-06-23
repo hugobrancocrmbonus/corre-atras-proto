@@ -1,13 +1,11 @@
 import type { Preview } from '@storybook/react-vite'
-import { useEffect } from 'react'
 import '../src/tokens/index.css'
 import '../src/index.css'
 
-const DARK_BG = '#121416'
+const DARK_BG  = '#121416'
 const LIGHT_BG = '#f4f7fa'
 
 function resolveBg(globals: Record<string, unknown>): string {
-  // Storybook can return the name string OR an object with .value
   const raw = globals?.backgrounds
   if (!raw) return DARK_BG
   if (typeof raw === 'string') return raw === 'light' ? LIGHT_BG : DARK_BG
@@ -37,17 +35,19 @@ const preview: Preview = {
   },
   decorators: [
     (Story, context) => {
-      const bg = resolveBg(context.globals as Record<string, unknown>)
+      const bg     = resolveBg(context.globals as Record<string, unknown>)
       const isDark = bg !== LIGHT_BG
+      const theme  = isDark ? 'dark' : 'light'
 
-      useEffect(() => {
-        // Cobre elementos portalizados (fixed/absolute) fora do wrapper
-        document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light')
-      }, [isDark])
+      // Síncrono — garante que os tokens já estão corretos antes do primeiro render,
+      // cobrindo também elementos fixed/portalizados (BrandDrawer, etc.)
+      if (typeof document !== 'undefined') {
+        document.documentElement.setAttribute('data-theme', theme)
+      }
 
       return (
         <div
-          data-theme={isDark ? 'dark' : 'light'}
+          data-theme={theme}
           style={{ backgroundColor: bg, minHeight: '100vh', padding: 32 }}
         >
           <Story />
