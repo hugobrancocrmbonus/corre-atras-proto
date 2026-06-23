@@ -628,7 +628,7 @@ export function CorreAtrasPage() {
             </div>
             <Table
               columns={COLUMNS}
-              rows={filtered as unknown as Record<string, unknown>[]}
+              rows={filtered}
               onSearch={setSearchQuery}
               searchQuery={searchQuery}
             />

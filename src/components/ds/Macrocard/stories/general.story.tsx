@@ -26,9 +26,9 @@ export const WithCards: Story = {
   name: 'Com CardIndicadors',
   render: () => (
     <Macrocard title="Visão geral" tagLabel="Ativo">
-      <CardIndicador label="Clientes alcançados" value="12.483" trend="+8,3%" trendPositive />
-      <CardIndicador label="Retorno médio" value="R$ 247" trend="+12,1%" trendPositive />
-      <CardIndicador label="Receita incremental" value="R$ 3,08M" trend="+5,4%" trendPositive />
+      <CardIndicador title="Clientes alcançados" value="12.483" change="+8,3%" />
+      <CardIndicador title="Retorno médio" value="R$ 247" change="+12,1%" />
+      <CardIndicador title="Receita incremental" value="R$ 3,08M" change="+5,4%" />
     </Macrocard>
   ),
 }
