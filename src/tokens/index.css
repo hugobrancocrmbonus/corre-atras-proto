@@ -209,7 +209,7 @@
 }
 
 /* ─── Semantic tokens — Dark mode ──────────────────────────────────────────── */
-.dark {
+.dark, [data-theme="dark"] {
   /* CDS background layers — valores reais do Figma */
   --cds-bg-layer-01: #121416;
   --cds-bg-layer-02: #1f252a;
@@ -241,7 +241,7 @@
   --cds-radius-sm: 4px;
 }
 
-.dark {
+.dark, [data-theme="dark"] {
   /* Background */
   --color-bg-primary:   var(--primitive-neutral-950);
   --color-bg-secondary: var(--primitive-neutral-900);
