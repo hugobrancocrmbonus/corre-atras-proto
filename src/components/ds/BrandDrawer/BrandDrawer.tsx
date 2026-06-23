@@ -92,14 +92,14 @@ export function BrandDrawer({
           className="flex items-center justify-between shrink-0 overflow-hidden"
           style={{
             padding: '24px 22px',
-            backgroundColor: 'var(--cds-bg-layer-02)',
-            borderBottom: '1px solid var(--cds-border-subtle)',
+            backgroundColor: 'var(--cds-color-background-layer-02)',
+            borderBottom: '1px solid var(--cds-color-border-subtle)',
           }}
         >
           <span
             className="text-[16px] font-semibold leading-[1.5] truncate"
             style={{
-              color: 'var(--cds-text-primary)',
+              color: 'var(--cds-color-text-primary)',
               letterSpacing: '0.32px',
             }}
           >
@@ -115,7 +115,7 @@ export function BrandDrawer({
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
               <path
                 d="M18 6L6 18M6 6l12 12"
-                stroke="var(--crm-fg-neutral-strong)"
+                stroke="var(--cds-color-text-primary)"
                 strokeWidth="1.5"
                 strokeLinecap="round"
               />
@@ -130,10 +130,10 @@ export function BrandDrawer({
             paddingTop: 16,
             paddingLeft: 16,
             paddingRight: 16,
-            backgroundColor: 'var(--cds-bg-layer-02)',
-            borderLeft: '1px solid var(--cds-border-subtle)',
-            borderRight: '1px solid var(--cds-border-subtle)',
-            borderBottom: '1px solid var(--cds-border-subtle)',
+            backgroundColor: 'var(--cds-color-background-layer-02)',
+            borderLeft: '1px solid var(--cds-color-border-subtle)',
+            borderRight: '1px solid var(--cds-color-border-subtle)',
+            borderBottom: '1px solid var(--cds-color-border-subtle)',
           }}
         >
           {/* Search input */}
@@ -141,16 +141,16 @@ export function BrandDrawer({
             <div
               className="flex items-center h-[40px] overflow-hidden"
               style={{
-                borderRadius: 'var(--cds-radius-sm)',
-                backgroundColor: 'var(--crm-search-bg)',
-                border: '1px solid var(--crm-search-border)',
+                borderRadius: 'var(--cds-border-radius-sm)',
+                backgroundColor: 'var(--cds-color-background-field)',
+                border: '1px solid var(--cds-color-border-subtle)',
               }}
             >
               {/* Ícone lupa */}
               <div className="flex items-center justify-center shrink-0" style={{ width: 40, height: 40 }}>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
-                  <circle cx="7" cy="7" r="4.5" stroke="var(--crm-fg-neutral-weak)" strokeWidth="1.3" />
-                  <path d="M10.5 10.5L13.5 13.5" stroke="var(--crm-fg-neutral-weak)" strokeWidth="1.3" strokeLinecap="round" />
+                  <circle cx="7" cy="7" r="4.5" stroke="var(--cds-color-icon-secondary)" strokeWidth="1.3" />
+                  <path d="M10.5 10.5L13.5 13.5" stroke="var(--cds-color-icon-secondary)" strokeWidth="1.3" strokeLinecap="round" />
                 </svg>
               </div>
               <input
@@ -161,8 +161,8 @@ export function BrandDrawer({
                 onChange={e => setSearch(e.target.value)}
                 className="flex-1 min-w-0 bg-transparent border-none outline-none text-[12px] leading-[16px]"
                 style={{
-                  color: 'var(--cds-text-primary)',
-                  caretColor: 'var(--cds-brand-text)',
+                  color: 'var(--cds-color-text-primary)',
+                  caretColor: 'var(--cds-color-brand-text)',
                 }}
               />
             </div>
@@ -187,8 +187,8 @@ export function BrandDrawer({
                     className="text-[14px] leading-[20px] font-medium whitespace-nowrap"
                     style={{
                       color: isActive
-                        ? 'var(--crm-fg-primary-default)'
-                        : 'var(--crm-fg-neutral-strong)',
+                        ? 'var(--cds-color-brand-text)'
+                        : 'var(--cds-color-text-primary)',
                     }}
                   >
                     {label}
@@ -200,7 +200,7 @@ export function BrandDrawer({
                       style={{
                         height: 2,
                         borderRadius: '2px 2px 0 0',
-                        backgroundColor: 'var(--crm-fg-primary-default)',
+                        backgroundColor: 'var(--cds-color-brand-text)',
                       }}
                     />
                   )}
@@ -215,13 +215,13 @@ export function BrandDrawer({
           className="flex-1 overflow-y-auto flex flex-col gap-[10px]"
           style={{
             padding: '16px 18px',
-            backgroundColor: 'var(--cds-bg-layer-01)',
+            backgroundColor: 'var(--cds-color-background-layer-01)',
           }}
         >
           {filtered.length === 0 ? (
             <p
               className="text-[14px] text-center py-8"
-              style={{ color: 'var(--crm-fg-neutral-weak)' }}
+              style={{ color: 'var(--cds-color-icon-secondary)' }}
             >
               Nenhuma marca encontrada.
             </p>
@@ -244,8 +244,8 @@ export function BrandDrawer({
           className="flex items-center justify-end gap-4 shrink-0 overflow-hidden"
           style={{
             padding: '24px 22px',
-            backgroundColor: 'var(--cds-bg-layer-02)',
-            border: '1px solid var(--cds-border-subtle)',
+            backgroundColor: 'var(--cds-color-background-layer-02)',
+            border: '1px solid var(--cds-color-border-subtle)',
           }}
         >
           {/* Cancelar */}
@@ -253,13 +253,13 @@ export function BrandDrawer({
             onClick={onClose}
             className="flex items-center justify-center h-[48px] px-4 bg-transparent cursor-pointer"
             style={{
-              borderRadius: 'var(--cds-radius-sm)',
-              border: '1px solid var(--crm-fg-neutral-strong)',
+              borderRadius: 'var(--cds-border-radius-sm)',
+              border: '1px solid var(--cds-color-text-primary)',
             }}
           >
             <span
               className="text-[14px] leading-[20px] font-medium whitespace-nowrap"
-              style={{ color: 'var(--crm-fg-neutral-strong)' }}
+              style={{ color: 'var(--cds-color-text-primary)' }}
             >
               Cancelar
             </span>
@@ -271,8 +271,8 @@ export function BrandDrawer({
             disabled={!canConfirm}
             className="flex items-center justify-center h-[48px] px-4 cursor-pointer"
             style={{
-              borderRadius: 'var(--cds-radius-sm)',
-              backgroundColor: 'var(--crm-btn-primary-bg)',
+              borderRadius: 'var(--cds-border-radius-sm)',
+              backgroundColor: 'var(--cds-color-brand-background)',
               border: 'none',
               opacity: canConfirm ? 1 : 0.3,
               cursor: canConfirm ? 'pointer' : 'not-allowed',
@@ -280,7 +280,7 @@ export function BrandDrawer({
           >
             <span
               className="text-[14px] leading-[20px] font-medium whitespace-nowrap"
-              style={{ color: 'var(--crm-btn-primary-text)' }}
+              style={{ color: 'var(--cds-color-text-on-brand)' }}
             >
               {confirmLabel}
             </span>

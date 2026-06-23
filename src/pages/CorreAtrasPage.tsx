@@ -242,7 +242,7 @@ function ConfiguracoesTab() {
           style={{
             width: '100%',
             maxWidth: 720,
-            border: '1px solid var(--crm-fg-neutral-weak, #9eaab3)',
+            border: '1px solid var(--cds-color-icon-secondary, #9eaab3)',
             borderRadius: 8,
             overflow: 'hidden',
           }}
@@ -254,8 +254,8 @@ function ConfiguracoesTab() {
               flexDirection: 'column',
               gap: 12,
               padding: 16,
-              backgroundColor: 'var(--crm-bg-surface-lower, #22272b)',
-              borderBottom: '1px solid var(--crm-fg-neutral-weak, #9eaab3)',
+              backgroundColor: 'var(--cds-color-background-layer-02, #22272b)',
+              borderBottom: '1px solid var(--cds-color-icon-secondary, #9eaab3)',
             }}
           >
             {/* Search + Region select */}
@@ -267,13 +267,13 @@ function ConfiguracoesTab() {
                   height: 40,
                   display: 'flex',
                   alignItems: 'center',
-                  backgroundColor: 'var(--crm-bg-surface-lower, #22272b)',
-                  border: '1px solid var(--crm-border-moderate, #3d464d)',
+                  backgroundColor: 'var(--cds-color-background-layer-02, #22272b)',
+                  border: '1px solid var(--cds-color-border-subtle, #3d464d)',
                   borderRadius: 4,
                   overflow: 'hidden',
                 }}
               >
-                <div style={{ width: 40, height: 40, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: 'var(--crm-fg-neutral-weak)' }}>
+                <div style={{ width: 40, height: 40, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: 'var(--cds-color-icon-secondary)' }}>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="currentColor" strokeWidth="1.3"/><path d="M10.5 10.5L13 13" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>
                 </div>
                 <input
@@ -288,7 +288,7 @@ function ConfiguracoesTab() {
                     border: 'none',
                     outline: 'none',
                     fontSize: 12,
-                    color: 'var(--crm-fg-neutral-strong)',
+                    color: 'var(--cds-color-text-primary)',
                     fontFamily: 'inherit',
                   }}
                 />
@@ -308,7 +308,7 @@ function ConfiguracoesTab() {
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <div
                 style={{
-                  backgroundColor: 'var(--cds-bg-layer-02, #2f373c)',
+                  backgroundColor: 'var(--cds-color-background-layer-02, #2f373c)',
                   borderRadius: 4,
                   padding: '0 12px',
                   height: 40,
@@ -316,7 +316,7 @@ function ConfiguracoesTab() {
                   alignItems: 'center',
                 }}
               >
-                <span style={{ fontSize: 12, fontWeight: 500, color: 'var(--crm-fg-neutral-strong)', whiteSpace: 'nowrap' }}>
+                <span style={{ fontSize: 12, fontWeight: 500, color: 'var(--cds-color-text-primary)', whiteSpace: 'nowrap' }}>
                   {selected.size} {selected.size === 1 ? 'loja selecionada' : 'lojas selecionadas'}
                 </span>
               </div>
@@ -340,7 +340,7 @@ function ConfiguracoesTab() {
           </div>
 
           {/* Stores list */}
-          <div className="dark-scroll" style={{ height: 320, overflowY: 'auto', backgroundColor: 'var(--cds-bg-layer-01, #121416)' }}>
+          <div className="dark-scroll" style={{ height: 320, overflowY: 'auto', backgroundColor: 'var(--cds-color-background-layer-01, #121416)' }}>
             {filteredStores.map(store => (
               <div
                 key={store.id}
@@ -349,21 +349,21 @@ function ConfiguracoesTab() {
                   alignItems: 'center',
                   height: 56,
                   padding: '0 16px',
-                  borderBottom: '1px solid var(--cds-border-subtle, #353e45)',
+                  borderBottom: '1px solid var(--cds-color-border-subtle, #353e45)',
                   cursor: 'pointer',
                   justifyContent: 'space-between',
                 }}
                 onClick={() => toggleStore(store.id)}
-                onMouseEnter={e => (e.currentTarget.style.backgroundColor = 'var(--cds-bg-layer-02, #1f252a)')}
+                onMouseEnter={e => (e.currentTarget.style.backgroundColor = 'var(--cds-color-background-layer-02, #1f252a)')}
                 onMouseLeave={e => (e.currentTarget.style.backgroundColor = 'transparent')}
               >
-                <span style={{ fontSize: 12, color: 'var(--crm-fg-neutral-strong)' }}>{store.name}</span>
+                <span style={{ fontSize: 12, color: 'var(--cds-color-text-primary)' }}>{store.name}</span>
                 <div
                   style={{
                     width: 16,
                     height: 16,
                     borderRadius: 2,
-                    border: selected.has(store.id) ? 'none' : '1px solid var(--crm-fg-neutral-moderate, #c0c8ce)',
+                    border: selected.has(store.id) ? 'none' : '1px solid var(--cds-color-border-strong, #c0c8ce)',
                     backgroundColor: selected.has(store.id) ? '#e69400' : 'transparent',
                     display: 'flex',
                     alignItems: 'center',
@@ -381,7 +381,7 @@ function ConfiguracoesTab() {
               </div>
             ))}
             {filteredStores.length === 0 && (
-              <div style={{ padding: 24, fontSize: 12, color: 'var(--crm-fg-neutral-weak)', textAlign: 'center' }}>
+              <div style={{ padding: 24, fontSize: 12, color: 'var(--cds-color-icon-secondary)', textAlign: 'center' }}>
                 Nenhuma loja encontrada
               </div>
             )}
@@ -487,8 +487,8 @@ function ConfiguracoesTab() {
             justifyContent: 'flex-end',
             gap: 8,
             padding: '16px 32px',
-            backgroundColor: 'var(--cds-bg-layer-01, #121416)',
-            borderTop: '1px solid var(--cds-border-subtle, #353e45)',
+            backgroundColor: 'var(--cds-color-background-layer-01, #121416)',
+            borderTop: '1px solid var(--cds-color-border-subtle, #353e45)',
           }}
         >
           <button
@@ -496,13 +496,13 @@ function ConfiguracoesTab() {
             style={{
               height: 48,
               padding: '0 24px',
-              border: '1px solid var(--crm-fg-neutral-strong, #eef0f2)',
+              border: '1px solid var(--cds-color-text-primary, #eef0f2)',
               borderRadius: 4,
               background: 'none',
               cursor: 'pointer',
               fontSize: 16,
               fontWeight: 500,
-              color: 'var(--crm-fg-neutral-strong)',
+              color: 'var(--cds-color-text-primary)',
               fontFamily: 'inherit',
             }}
           >
@@ -558,7 +558,7 @@ export function CorreAtrasPage() {
             fontWeight: 700,
             lineHeight: '1.3',
             letterSpacing: '0.56px',
-            color: 'var(--crm-fg-neutral-strong)',
+            color: 'var(--cds-color-text-primary)',
           }}
         >
           Corre Atrás
@@ -619,10 +619,10 @@ export function CorreAtrasPage() {
           {/* Table */}
           <div>
             <div style={{ marginBottom: 16 }}>
-              <h2 style={{ margin: 0, fontSize: 16, fontWeight: 600, lineHeight: '24px', color: 'var(--crm-fg-neutral-strong)' }}>
+              <h2 style={{ margin: 0, fontSize: 16, fontWeight: 600, lineHeight: '24px', color: 'var(--cds-color-text-primary)' }}>
                 Clientes selecionados
               </h2>
-              <p style={{ margin: '2px 0 0 0', fontSize: 13, color: 'var(--crm-fg-neutral-weak)' }}>
+              <p style={{ margin: '2px 0 0 0', fontSize: 13, color: 'var(--cds-color-icon-secondary)' }}>
                 Contatos incluídos no disparo de hoje
               </p>
             </div>

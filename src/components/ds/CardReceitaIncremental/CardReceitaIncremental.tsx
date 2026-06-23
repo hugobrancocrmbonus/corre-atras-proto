@@ -213,10 +213,10 @@ export function CardReceitaIncremental({
 
       {/* Text */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: 4, flexShrink: 0, width: 200 }}>
-        <p style={{ margin: 0, fontSize: 12, fontWeight: 500, lineHeight: '16px', color: 'var(--cds-text-primary)' }}>
-          {title} <span style={{ color: 'var(--crm-fg-neutral-weak)' }}>({period})</span>
+        <p style={{ margin: 0, fontSize: 12, fontWeight: 500, lineHeight: '16px', color: 'var(--cds-color-text-primary)' }}>
+          {title} <span style={{ color: 'var(--cds-color-icon-secondary)' }}>({period})</span>
         </p>
-        <p style={{ margin: 0, fontSize: 24, fontWeight: 600, lineHeight: '32px', color: 'var(--cds-text-primary)', whiteSpace: 'nowrap' }}>
+        <p style={{ margin: 0, fontSize: 24, fontWeight: 600, lineHeight: '32px', color: 'var(--cds-color-text-primary)', whiteSpace: 'nowrap' }}>
           {value}
         </p>
       </div>

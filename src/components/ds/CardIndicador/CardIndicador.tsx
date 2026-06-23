@@ -15,7 +15,7 @@ export function CardIndicador({ title, value, change = '00%', iconSrc = ICON_SRC
         alignItems: 'center',
         gap: 8,
         padding: 16,
-        border: '1px solid var(--cds-border-subtle)',
+        border: '1px solid var(--cds-color-border-subtle)',
         borderRadius: 8,
         flex: '1 0 0',
         minWidth: 0,
@@ -30,11 +30,11 @@ export function CardIndicador({ title, value, change = '00%', iconSrc = ICON_SRC
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 4, flex: 1, minWidth: 0 }}>
-        <p style={{ fontSize: 12, fontWeight: 500, lineHeight: '16px', color: 'var(--cds-text-primary)', margin: 0, width: '100%' }}>
+        <p style={{ fontSize: 12, fontWeight: 500, lineHeight: '16px', color: 'var(--cds-color-text-primary)', margin: 0, width: '100%' }}>
           {title}
         </p>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
-          <p style={{ fontSize: 24, fontWeight: 600, lineHeight: '32px', color: 'var(--cds-text-primary)', margin: 0, whiteSpace: 'nowrap' }}>
+          <p style={{ fontSize: 24, fontWeight: 600, lineHeight: '32px', color: 'var(--cds-color-text-primary)', margin: 0, whiteSpace: 'nowrap' }}>
             {value}
           </p>
           <div
@@ -49,7 +49,7 @@ export function CardIndicador({ title, value, change = '00%', iconSrc = ICON_SRC
               borderRadius: 999,
             }}
           >
-            <span style={{ fontSize: 12, fontWeight: 500, lineHeight: '16px', color: 'var(--crm-fg-neutral-strong)', whiteSpace: 'nowrap' }}>
+            <span style={{ fontSize: 12, fontWeight: 500, lineHeight: '16px', color: 'var(--cds-color-text-primary)', whiteSpace: 'nowrap' }}>
               {change}
             </span>
           </div>

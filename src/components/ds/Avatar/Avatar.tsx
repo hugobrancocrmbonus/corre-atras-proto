@@ -17,8 +17,8 @@ export function Avatar({ src, alt = 'Avatar', onClick }: AvatarProps) {
         style={{
           width: 40,
           height: 40,
-          borderRadius: 'var(--cds-radius-sm)',
-          backgroundColor: 'var(--crm-surface-lower)',
+          borderRadius: 'var(--cds-border-radius-sm)',
+          backgroundColor: 'var(--cds-color-background-layer-03)',
         }}
       >
         {src ? (
@@ -26,13 +26,13 @@ export function Avatar({ src, alt = 'Avatar', onClick }: AvatarProps) {
             src={src}
             alt={alt}
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ borderRadius: 'var(--cds-radius-sm)' }}
+            style={{ borderRadius: 'var(--cds-border-radius-sm)' }}
           />
         ) : (
           /* Fallback: initials placeholder */
           <div
             className="absolute inset-0 flex items-center justify-center text-xs font-medium"
-            style={{ color: 'var(--crm-fg-neutral-weak)' }}
+            style={{ color: 'var(--cds-color-icon-secondary)' }}
           >
             {alt.charAt(0).toUpperCase()}
           </div>
@@ -41,7 +41,7 @@ export function Avatar({ src, alt = 'Avatar', onClick }: AvatarProps) {
 
       {/* Caret down */}
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden style={{ flexShrink: 0 }}>
-        <path d="M4 6L8 10L12 6" stroke="var(--crm-fg-neutral-weak, #8d9ba5)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M4 6L8 10L12 6" stroke="var(--cds-color-icon-secondary, #8d9ba5)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </button>
   )

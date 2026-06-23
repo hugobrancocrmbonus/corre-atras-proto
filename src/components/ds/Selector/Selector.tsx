@@ -27,8 +27,8 @@ export function Selector({
         width: '100%',
         padding: 16,
         borderRadius: 4,
-        backgroundColor: isPressed ? 'var(--cds-bg-layer-02, #22272b)' : 'var(--cds-bg-layer-03, #353e45)',
-        border: isPressed ? 'none' : '1px solid var(--cds-border-subtle, #353e45)',
+        backgroundColor: isPressed ? 'var(--cds-color-background-layer-02, #22272b)' : 'var(--cds-color-background-layer-03, #353e45)',
+        border: isPressed ? 'none' : '1px solid var(--cds-color-border-subtle, #353e45)',
         cursor: 'pointer',
         textAlign: 'left',
         overflow: 'hidden',
@@ -45,7 +45,7 @@ export function Selector({
             width: 56,
             height: 56,
             borderRadius: 4,
-            backgroundColor: 'var(--cds-bg-layer-01, #121416)',
+            backgroundColor: 'var(--cds-color-background-layer-01, #121416)',
             overflow: 'hidden',
           }}
         >
@@ -58,10 +58,10 @@ export function Selector({
 
         {/* Text */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 2, minWidth: 0 }}>
-          <span style={{ fontSize: 14, fontWeight: 500, lineHeight: '20px', color: 'var(--cds-text-primary, #f4f7fa)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+          <span style={{ fontSize: 14, fontWeight: 500, lineHeight: '20px', color: 'var(--cds-color-text-primary, #f4f7fa)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
             {brandName}
           </span>
-          <span style={{ fontSize: 12, fontWeight: 500, lineHeight: '16px', color: 'var(--cds-text-secondary, #bcc6cd)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+          <span style={{ fontSize: 12, fontWeight: 500, lineHeight: '16px', color: 'var(--cds-color-text-secondary, #bcc6cd)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
             {csResponsavel}
           </span>
         </div>
@@ -71,7 +71,7 @@ export function Selector({
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{ flexShrink: 0 }} aria-hidden>
         <path
           d="M4.5 2.5L8 6L4.5 9.5"
-          stroke={isPressed ? 'var(--cds-text-primary, #f4f7fa)' : 'var(--crm-fg-neutral-weak, #8d9ba5)'}
+          stroke={isPressed ? 'var(--cds-color-text-primary, #f4f7fa)' : 'var(--cds-color-icon-secondary, #8d9ba5)'}
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"

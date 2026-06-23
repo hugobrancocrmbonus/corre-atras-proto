@@ -53,8 +53,8 @@ export function TopBar({
         paddingRight: 32,
         paddingTop: 12,
         paddingBottom: 12,
-        backgroundColor: 'var(--cds-bg-layer-01)',
-        borderBottom: '1px solid var(--cds-border-subtle)',
+        backgroundColor: 'var(--cds-color-background-layer-01)',
+        borderBottom: '1px solid var(--cds-color-border-subtle)',
       }}
     >
       {/* ── Left: Logo + divider + Breadcrumb ─────────────────────────── */}
@@ -72,7 +72,7 @@ export function TopBar({
         {/* Divider */}
         <div
           className="shrink-0"
-          style={{ width: 1, height: 16, backgroundColor: 'var(--cds-border-subtle)' }}
+          style={{ width: 1, height: 16, backgroundColor: 'var(--cds-color-border-subtle)' }}
         />
 
         {/* Breadcrumb */}
@@ -86,7 +86,7 @@ export function TopBar({
                   <span
                     className="mx-1 text-[14px] font-medium leading-none"
                     style={{
-                      color: 'var(--crm-fg-neutral-weak)',
+                      color: 'var(--cds-color-icon-secondary)',
                       letterSpacing: '0.28px',
                     }}
                   >
@@ -101,10 +101,10 @@ export function TopBar({
                     style={{
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
                       height: 32, padding: '0 8px',
-                      borderRadius: 'var(--cds-radius-sm)',
+                      borderRadius: 'var(--cds-border-radius-sm)',
                       background: 'none', border: 'none', cursor: 'pointer',
                       fontSize: 12, fontWeight: 400, lineHeight: '16px', whiteSpace: 'nowrap',
-                      color: 'var(--crm-fg-primary-default)',
+                      color: 'var(--cds-color-brand-text)',
                     }}
                   >
                     {item.label}
@@ -114,14 +114,14 @@ export function TopBar({
                     style={{
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
                       height: 32, padding: '0 8px',
-                      borderRadius: 'var(--cds-radius-sm)',
+                      borderRadius: 'var(--cds-border-radius-sm)',
                     }}
                   >
                     <span
                       style={{
                         fontSize: 12, lineHeight: '16px', whiteSpace: 'nowrap',
                         fontWeight: isLast ? 600 : 400,
-                        color: isLast ? 'var(--crm-fg-neutral-strong)' : 'var(--crm-fg-neutral-weak)',
+                        color: isLast ? 'var(--cds-color-text-primary)' : 'var(--cds-color-icon-secondary)',
                       }}
                     >
                       {item.label}
@@ -142,13 +142,13 @@ export function TopBar({
             onClick={onLegacyClick}
             className="flex items-center justify-center h-[40px] px-4 bg-transparent cursor-pointer"
             style={{
-              border: '1px solid var(--crm-fg-neutral-strong)',
-              borderRadius: 'var(--cds-radius-sm)',
+              border: '1px solid var(--cds-color-text-primary)',
+              borderRadius: 'var(--cds-border-radius-sm)',
             }}
           >
             <span
               className="text-[14px] leading-[20px] font-medium whitespace-nowrap"
-              style={{ color: 'var(--crm-fg-neutral-strong)' }}
+              style={{ color: 'var(--cds-color-text-primary)' }}
             >
               Versão antiga
             </span>

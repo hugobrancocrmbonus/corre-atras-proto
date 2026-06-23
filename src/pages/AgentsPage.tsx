@@ -22,7 +22,7 @@ export function AgentsPage({ onSelectAgent }: AgentsPageProps) {
       >
         <h1
           className="text-[28px] font-bold leading-[1.3] tracking-[0.56px]"
-          style={{ color: 'var(--crm-fg-neutral-strong)', margin: 0 }}
+          style={{ color: 'var(--cds-color-text-primary)', margin: 0 }}
         >
           Agentes IA
         </h1>

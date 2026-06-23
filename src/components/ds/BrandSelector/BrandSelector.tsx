@@ -14,8 +14,8 @@ export function BrandSelector({ brandLogoSrc, brandName, onChangeBrand }: BrandS
     <div
       className="flex items-center h-[40px]"
       style={{
-        backgroundColor: 'var(--cds-bg-layer-03)',
-        borderRadius: 'var(--cds-radius-sm)',
+        backgroundColor: 'var(--cds-color-background-layer-03)',
+        borderRadius: 'var(--cds-border-radius-sm)',
         paddingTop: 4,
         paddingBottom: 4,
       }}
@@ -33,7 +33,7 @@ export function BrandSelector({ brandLogoSrc, brandName, onChangeBrand }: BrandS
               style={{
                 width: 56,
                 height: '100%',
-                borderRadius: 'var(--cds-radius-sm)',
+                borderRadius: 'var(--cds-border-radius-sm)',
                 backgroundColor: '#ffffff',
               }}
             >
@@ -49,7 +49,7 @@ export function BrandSelector({ brandLogoSrc, brandName, onChangeBrand }: BrandS
           <div className="flex flex-col items-start shrink-0" style={{ paddingLeft: 8, paddingRight: 8 }}>
             <span
               className="text-[12px] leading-[16px] font-normal whitespace-nowrap"
-              style={{ color: 'var(--cds-text-primary)' }}
+              style={{ color: 'var(--cds-color-text-primary)' }}
             >
               {brandName}
             </span>
@@ -61,7 +61,7 @@ export function BrandSelector({ brandLogoSrc, brandName, onChangeBrand }: BrandS
             style={{
               width: 1,
               height: 16,
-              backgroundColor: 'var(--cds-border-subtle)',
+              backgroundColor: 'var(--cds-color-border-subtle)',
               opacity: 0.5,
             }}
           />
@@ -76,7 +76,7 @@ export function BrandSelector({ brandLogoSrc, brandName, onChangeBrand }: BrandS
       >
         <span
           className="text-[12px] leading-[16px] font-medium underline whitespace-nowrap"
-          style={{ color: 'var(--cds-brand-text)' }}
+          style={{ color: 'var(--cds-color-brand-text)' }}
         >
           Trocar marca
         </span>

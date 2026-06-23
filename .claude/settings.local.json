@@ -28,7 +28,10 @@
       "Bash(npm run *)",
       "Bash(curl -s http://localhost:6006)",
       "Bash(kill 41365)",
-      "Bash(git remote *)"
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "mcp__ca35b8f3-4bd8-46d3-a2f8-3c8a05199dd4__search",
+      "Bash(xargs perl -pi -e ' *)"
     ]
   }
 }

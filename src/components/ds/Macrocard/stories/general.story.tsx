@@ -38,7 +38,7 @@ export const WithCustomContent: Story = {
   render: () => (
     <div style={{ maxWidth: 600 }}>
       <Macrocard title="Configurações gerais">
-        <div style={{ color: 'var(--cds-text-secondary)', fontSize: 14 }}>
+        <div style={{ color: 'var(--cds-color-text-secondary)', fontSize: 14 }}>
           Conteúdo customizado via children
         </div>
       </Macrocard>
@@ -51,7 +51,7 @@ export const NoTag: Story = {
   render: () => (
     <div style={{ maxWidth: 500 }}>
       <Macrocard title="Lojas ativas">
-        <div style={{ color: 'var(--cds-text-secondary)', fontSize: 14 }}>Conteúdo</div>
+        <div style={{ color: 'var(--cds-color-text-secondary)', fontSize: 14 }}>Conteúdo</div>
       </Macrocard>
     </div>
   ),

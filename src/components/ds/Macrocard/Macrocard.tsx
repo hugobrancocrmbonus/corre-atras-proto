@@ -106,7 +106,7 @@ export function Macrocard({ title, tagLabel, cards = [], children }: MacrocardPr
               fontSize: 20,
               fontWeight: 700,
               lineHeight: '28px',
-              color: 'var(--cds-text-primary)',
+              color: 'var(--cds-color-text-primary)',
             }}
           >
             {title}

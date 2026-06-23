@@ -40,7 +40,7 @@ export const Open: Story = {
         >
           Abrir Drawer
         </button>
-        <p style={{ marginLeft: 32, color: 'var(--cds-text-secondary)', fontSize: 14 }}>
+        <p style={{ marginLeft: 32, color: 'var(--cds-color-text-secondary)', fontSize: 14 }}>
           Marca selecionada: {selected?.name ?? 'nenhuma'}
         </p>
         <BrandDrawer

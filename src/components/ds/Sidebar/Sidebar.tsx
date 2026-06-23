@@ -27,8 +27,8 @@ export function Sidebar({ expanded, onToggle, items }: SidebarProps) {
     <div
       className="flex flex-col gap-[10px] pt-[34px] h-full overflow-hidden"
       style={{
-        backgroundColor: 'var(--cds-bg-layer-01)',
-        borderRight: '1px solid var(--cds-border-subtle)',
+        backgroundColor: 'var(--cds-color-background-layer-01)',
+        borderRight: '1px solid var(--cds-color-border-subtle)',
         width: '100%',
       }}
     >
@@ -39,9 +39,9 @@ export function Sidebar({ expanded, onToggle, items }: SidebarProps) {
           aria-label={expanded ? 'Recolher menu' : 'Expandir menu'}
           aria-expanded={expanded}
           className="flex items-center justify-center h-[64px] w-[64px] shrink-0 border-none cursor-pointer bg-transparent"
-          style={{ borderRadius: 'var(--cds-radius-sm)' }}
+          style={{ borderRadius: 'var(--cds-border-radius-sm)' }}
         >
-          <span style={{ color: 'var(--crm-fg-neutral-weak)', display: 'flex' }}>
+          <span style={{ color: 'var(--cds-color-icon-secondary)', display: 'flex' }}>
             <HamburgerIcon />
           </span>
         </button>

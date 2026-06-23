@@ -1,282 +1,246 @@
-/* CarumDS — Design Tokens
- * Estrutura de CSS variables aguardando extração dos tokens oficiais do Figma.
- * Quando o DS oficializar, substituir os valores primitivos abaixo pelos tokens do CarumDS.
- */
+/* ═══════════════════════════════════════════════════════════════════════════
+ * CarumDS — Design Tokens (official architecture, v2.1)
+ * Source: https://crmbonusbit.atlassian.net/wiki/spaces/DOCTECH/pages/1938259973
+ * Tier 1 (primitives) → Tier 2 (semantic light + dark)
+ * ═══════════════════════════════════════════════════════════════════════════ */
 
-/* ─── Primitive tokens ─────────────────────────────────────────────────────── */
+/* ─── Tier 1: Primitive — Color ─────────────────────────────────────────── */
 :root {
-  /* Color primitives */
-  --primitive-neutral-0:   #ffffff;
-  --primitive-neutral-50:  #f7f7f8;
-  --primitive-neutral-100: #efefef;
-  --primitive-neutral-200: #e0e0e2;
-  --primitive-neutral-300: #c8c8cc;
-  --primitive-neutral-400: #9e9ea6;
-  --primitive-neutral-500: #6e6e78;
-  --primitive-neutral-600: #4a4a52;
-  --primitive-neutral-700: #333338;
-  --primitive-neutral-800: #1f1f24;
-  --primitive-neutral-900: #111114;
-  --primitive-neutral-950: #08080a;
+  /* neutral */
+  --cds-primitive-neutral-0:   #FFFFFF;
+  --cds-primitive-neutral-50:  #F4F7FA;
+  --cds-primitive-neutral-100: #E8EEF2;
+  --cds-primitive-neutral-200: #D4DCE2;
+  --cds-primitive-neutral-300: #BCC6CD;
+  --cds-primitive-neutral-400: #A6B1BA;
+  --cds-primitive-neutral-500: #8D9BA5;
+  --cds-primitive-neutral-600: #6A7883;
+  --cds-primitive-neutral-700: #525E68;
+  --cds-primitive-neutral-800: #353E45;
+  --cds-primitive-neutral-900: #1F252A;
+  --cds-primitive-neutral-950: #121416;
 
-  --primitive-brand-50:  #fff3e6;
-  --primitive-brand-100: #ffddb8;
-  --primitive-brand-200: #ffc489;
-  --primitive-brand-300: #ffa85a;
-  --primitive-brand-400: #ff9136;
-  --primitive-brand-500: #ff7a00;
-  --primitive-brand-600: #e06b00;
-  --primitive-brand-700: #b85800;
-  --primitive-brand-800: #8f4300;
-  --primitive-brand-900: #5c2b00;
+  /* brand */
+  --cds-primitive-brand-300: #FEBA63;
+  --cds-primitive-brand-400: #FFA500;
+  --cds-primitive-brand-500: #DF8800;
+  --cds-primitive-brand-600: #C27000;
+  --cds-primitive-brand-700: #A05800;
 
-  --primitive-green-500:  #22c55e;
-  --primitive-green-600:  #16a34a;
-  --primitive-green-100:  #dcfce7;
-  --primitive-green-900:  #14532d;
+  /* green */
+  --cds-primitive-green-50:  #EAFDE9;
+  --cds-primitive-green-400: #63C069;
+  --cds-primitive-green-600: #218B30;
+  --cds-primitive-green-900: #003C02;
 
-  --primitive-yellow-500: #eab308;
-  --primitive-yellow-600: #ca8a04;
-  --primitive-yellow-100: #fef9c3;
-  --primitive-yellow-900: #713f12;
+  /* red */
+  --cds-primitive-red-50:  #FFEDE9;
+  --cds-primitive-red-300: #FF9991;
+  --cds-primitive-red-600: #D02C32;
+  --cds-primitive-red-700: #AE091C;
+  --cds-primitive-red-800: #8B000D;
+  --cds-primitive-red-900: #620005;
 
-  --primitive-red-500:    #ef4444;
-  --primitive-red-600:    #dc2626;
-  --primitive-red-100:    #fee2e2;
-  --primitive-red-900:    #7f1d1d;
+  /* blue */
+  --cds-primitive-blue-50:  #E2FAFF;
+  --cds-primitive-blue-300: #6CCDFF;
+  --cds-primitive-blue-400: #22B0FF;
+  --cds-primitive-blue-600: #0079D7;
+  --cds-primitive-blue-800: #004893;
+  --cds-primitive-blue-900: #003068;
 
-  --primitive-blue-500:   #3b82f6;
-  --primitive-blue-600:   #2563eb;
-  --primitive-blue-100:   #dbeafe;
-  --primitive-blue-900:   #1e3a8a;
+  /* yellow */
+  --cds-primitive-yellow-50:  #FFF6DE;
+  --cds-primitive-yellow-400: #D49E00;
+  --cds-primitive-yellow-600: #A06800;
+  --cds-primitive-yellow-900: #482700;
 
-  /* Typography primitives */
-  --primitive-font-sans: 'Inter', system-ui, sans-serif;
-  --primitive-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  /* ─── Tier 1: Primitive — Dimension ─────────────────────────────────── */
+  --cds-dimension-0:  0px;
+  --cds-dimension-1:  1px;
+  --cds-dimension-2:  2px;
+  --cds-dimension-4:  4px;
+  --cds-dimension-8:  8px;
+  --cds-dimension-12: 12px;
+  --cds-dimension-16: 16px;
+  --cds-dimension-20: 20px;
+  --cds-dimension-24: 24px;
+  --cds-dimension-32: 32px;
+  --cds-dimension-40: 40px;
+  --cds-dimension-48: 48px;
+  --cds-dimension-56: 56px;
+  --cds-dimension-64: 64px;
+  --cds-dimension-80: 80px;
+  --cds-dimension-96: 96px;
 
-  --primitive-size-10: 10px;
-  --primitive-size-12: 12px;
-  --primitive-size-13: 13px;
-  --primitive-size-14: 14px;
-  --primitive-size-16: 16px;
-  --primitive-size-18: 18px;
-  --primitive-size-20: 20px;
-  --primitive-size-24: 24px;
-  --primitive-size-28: 28px;
-  --primitive-size-32: 32px;
-
-  --primitive-lh-tight:  1.2;
-  --primitive-lh-snug:   1.35;
-  --primitive-lh-normal: 1.5;
-  --primitive-lh-relaxed:1.65;
-
-  /* Spacing primitives */
-  --primitive-space-1:  4px;
-  --primitive-space-2:  8px;
-  --primitive-space-3:  12px;
-  --primitive-space-4:  16px;
-  --primitive-space-5:  20px;
-  --primitive-space-6:  24px;
-  --primitive-space-8:  32px;
-  --primitive-space-10: 40px;
-  --primitive-space-12: 48px;
-  --primitive-space-16: 64px;
-
-  /* Radius primitives */
-  --primitive-radius-2:  2px;
-  --primitive-radius-4:  4px;
-  --primitive-radius-6:  6px;
-  --primitive-radius-8:  8px;
-  --primitive-radius-12: 12px;
-  --primitive-radius-16: 16px;
-  --primitive-radius-full: 9999px;
+  /* ─── Tier 1: Primitive — Typography ────────────────────────────────── */
+  --cds-font-family-sans: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --cds-font-family-mono: 'JetBrains Mono', 'SF Mono', Consolas, Monaco, monospace;
+  --cds-font-weight-regular:  400;
+  --cds-font-weight-medium:   500;
+  --cds-font-weight-semibold: 600;
+  --cds-font-weight-bold:     700;
 }
 
-/* ─── Semantic tokens — Light mode (default) ───────────────────────────────── */
-:root,
-.light {
-  /* Background */
-  --color-bg-primary:   var(--primitive-neutral-0);
-  --color-bg-secondary: var(--primitive-neutral-50);
-  --color-bg-tertiary:  var(--primitive-neutral-100);
-  --color-bg-overlay:   rgba(0, 0, 0, 0.48);
+/* ─── Tier 2: Semantic — LIGHT MODE (default) ───────────────────────────── */
+:root {
+  /* background */
+  --cds-color-background-layer-01: var(--cds-primitive-neutral-0);
+  --cds-color-background-layer-02: var(--cds-primitive-neutral-50);
+  --cds-color-background-layer-03: var(--cds-primitive-neutral-100);
+  --cds-color-background-field:    var(--cds-primitive-neutral-50);
+  --cds-color-background-hover:    var(--cds-primitive-neutral-100);
+  --cds-color-background-pressed:  var(--cds-primitive-neutral-300);
+  --cds-color-background-disabled: var(--cds-primitive-neutral-200);
+  --cds-color-background-inverse:  var(--cds-primitive-neutral-900);
 
-  /* Surface */
-  --color-surface-1: var(--primitive-neutral-0);
-  --color-surface-2: var(--primitive-neutral-50);
-  --color-surface-3: var(--primitive-neutral-100);
+  /* text */
+  --cds-color-text-primary:     var(--cds-primitive-neutral-900);
+  --cds-color-text-secondary:   var(--cds-primitive-neutral-700);
+  --cds-color-text-placeholder: var(--cds-primitive-neutral-600);
+  --cds-color-text-disabled:    var(--cds-primitive-neutral-500);
+  --cds-color-text-on-color:    var(--cds-primitive-neutral-0);
+  --cds-color-text-on-brand:    var(--cds-primitive-neutral-950);
+  --cds-color-text-inverse:     var(--cds-primitive-neutral-50);
+  --cds-color-text-danger:      var(--cds-primitive-red-700);
 
-  /* Border */
-  --color-border-subtle:  var(--primitive-neutral-100);
-  --color-border-default: var(--primitive-neutral-200);
-  --color-border-strong:  var(--primitive-neutral-400);
+  /* icon */
+  --cds-color-icon-primary:   var(--cds-primitive-neutral-900);
+  --cds-color-icon-secondary: var(--cds-primitive-neutral-700);
+  --cds-color-icon-disabled:  var(--cds-primitive-neutral-500);
+  --cds-color-icon-on-color:  var(--cds-primitive-neutral-0);
+  --cds-color-icon-on-brand:  var(--cds-primitive-neutral-950);
+  --cds-color-icon-inverse:   var(--cds-primitive-neutral-50);
+  --cds-color-icon-danger:    var(--cds-primitive-red-700);
 
-  /* Text */
-  --color-text-primary:   var(--primitive-neutral-900);
-  --color-text-secondary: var(--primitive-neutral-600);
-  --color-text-tertiary:  var(--primitive-neutral-400);
-  --color-text-disabled:  var(--primitive-neutral-300);
-  --color-text-inverse:   var(--primitive-neutral-0);
+  /* border */
+  --cds-color-border-subtle:      var(--cds-primitive-neutral-200);
+  --cds-color-border-strong:      var(--cds-primitive-neutral-600);
+  --cds-color-border-interactive: var(--cds-primitive-brand-600);
+  --cds-color-border-disabled:    var(--cds-primitive-neutral-200);
+  --cds-color-border-focus:       var(--cds-primitive-blue-600);
 
-  /* Brand */
-  --color-brand-default: var(--primitive-brand-500);
-  --color-brand-hover:   var(--primitive-brand-600);
-  --color-brand-subtle:  var(--primitive-brand-50);
+  /* brand */
+  --cds-color-brand-background:         var(--cds-primitive-brand-400);
+  --cds-color-brand-background-hover:   var(--cds-primitive-brand-500);
+  --cds-color-brand-background-pressed: var(--cds-primitive-brand-600);
+  --cds-color-brand-text:               var(--cds-primitive-brand-700);
 
-  /* Status */
-  --color-status-success:        var(--primitive-green-600);
-  --color-status-warning:        var(--primitive-yellow-600);
-  --color-status-error:          var(--primitive-red-600);
-  --color-status-info:           var(--primitive-blue-600);
-  --color-status-success-subtle: var(--primitive-green-100);
-  --color-status-warning-subtle: var(--primitive-yellow-100);
-  --color-status-error-subtle:   var(--primitive-red-100);
-  --color-status-info-subtle:    var(--primitive-blue-100);
+  /* support */
+  --cds-color-support-success:        var(--cds-primitive-green-600);
+  --cds-color-support-success-subtle: var(--cds-primitive-green-50);
+  --cds-color-support-danger:         var(--cds-primitive-red-600);
+  --cds-color-support-danger-subtle:  var(--cds-primitive-red-50);
+  --cds-color-support-warning:        var(--cds-primitive-yellow-600);
+  --cds-color-support-warning-subtle: var(--cds-primitive-yellow-50);
+  --cds-color-support-info:           var(--cds-primitive-blue-600);
+  --cds-color-support-info-subtle:    var(--cds-primitive-blue-50);
 
-  /* Typography */
-  --font-family-base: var(--primitive-font-sans);
-  --font-family-mono: var(--primitive-font-mono);
-  --font-size-xs:   var(--primitive-size-10);
-  --font-size-sm:   var(--primitive-size-12);
-  --font-size-base: var(--primitive-size-14);
-  --font-size-md:   var(--primitive-size-16);
-  --font-size-lg:   var(--primitive-size-18);
-  --font-size-xl:   var(--primitive-size-20);
-  --font-size-2xl:  var(--primitive-size-24);
-  --line-height-xs:   var(--primitive-lh-tight);
-  --line-height-sm:   var(--primitive-lh-snug);
-  --line-height-base: var(--primitive-lh-normal);
-  --line-height-md:   var(--primitive-lh-normal);
-  --line-height-lg:   var(--primitive-lh-snug);
-  --line-height-xl:   var(--primitive-lh-tight);
-  --line-height-2xl:  var(--primitive-lh-tight);
+  /* ─── Tier 2: Semantic — Spacing ──────────────────────────────────── */
+  --cds-space-none: 0px;
+  --cds-space-2:    2px;
+  --cds-space-4:    4px;
+  --cds-space-8:    8px;
+  --cds-space-12:   12px;
+  --cds-space-16:   16px;
+  --cds-space-20:   20px;
+  --cds-space-24:   24px;
+  --cds-space-32:   32px;
+  --cds-space-48:   48px;
+  --cds-space-64:   64px;
+  --cds-space-80:   80px;
+  --cds-space-96:   96px;
 
-  /* Spacing */
-  --spacing-1:  var(--primitive-space-1);
-  --spacing-2:  var(--primitive-space-2);
-  --spacing-3:  var(--primitive-space-3);
-  --spacing-4:  var(--primitive-space-4);
-  --spacing-5:  var(--primitive-space-5);
-  --spacing-6:  var(--primitive-space-6);
-  --spacing-8:  var(--primitive-space-8);
-  --spacing-10: var(--primitive-space-10);
-  --spacing-12: var(--primitive-space-12);
-  --spacing-16: var(--primitive-space-16);
+  /* ─── Tier 2: Semantic — Size ─────────────────────────────────────── */
+  --cds-size-control-xs: 32px;
+  --cds-size-control-sm: 40px;
+  --cds-size-control-md: 48px;
+  --cds-size-control-lg: 56px;
 
-  /* Radius */
-  --radius-sm:   var(--primitive-radius-4);
-  --radius-base: var(--primitive-radius-6);
-  --radius-md:   var(--primitive-radius-8);
-  --radius-lg:   var(--primitive-radius-12);
-  --radius-xl:   var(--primitive-radius-16);
-  --radius-full: var(--primitive-radius-full);
+  --cds-size-icon-xs:  12px;
+  --cds-size-icon-sm:  16px;
+  --cds-size-icon-md:  20px;
+  --cds-size-icon-lg:  24px;
+  --cds-size-icon-xl:  32px;
+  --cds-size-icon-2xl: 40px;
+
+  /* ─── Tier 2: Semantic — Border radius ────────────────────────────── */
+  --cds-border-radius-none: 0px;
+  --cds-border-radius-sm:   4px;
+  --cds-border-radius-md:   8px;
+  --cds-border-radius-lg:   12px;
+  --cds-border-radius-xl:   16px;
+  --cds-border-radius-pill: 9999px;
+
+  /* ─── Tier 2: Semantic — Border width ────────────────────────────── */
+  --cds-border-width-none:       0px;
+  --cds-border-width-default:    1px;
+  --cds-border-width-strong:     2px;
+  --cds-border-width-bold:       4px;
+  --cds-border-width-focus-ring: 2px;
+
+  /* ─── Tier 2: Semantic — Shadow ──────────────────────────────────── */
+  --cds-shadow-xs: 0 1px 2px rgba(16,24,40,0.04), 0 1px 3px rgba(16,24,40,0.06);
+  --cds-shadow-sm: 0 1px 2px rgba(16,24,40,0.05), 0 2px 6px rgba(16,24,40,0.08);
+  --cds-shadow-md: 0 2px 4px rgba(16,24,40,0.06), 0 4px 12px rgba(16,24,40,0.10);
+  --cds-shadow-lg: 0 4px 8px rgba(16,24,40,0.08), 0 12px 24px rgba(16,24,40,0.12);
+  --cds-shadow-xl: 0 8px 16px rgba(16,24,40,0.10), 0 20px 40px rgba(16,24,40,0.16);
+
+  /* ─── Typography ──────────────────────────────────────────────────── */
+  --cds-text-font-family: var(--cds-font-family-sans);
 }
 
-/* ─── CarumDS compatibility layer — valores reais extraídos do Figma ───────── */
-/* Mapeia os tokens CDS/CRM usados nos componentes para os semantic tokens.    */
-/* Em light, usa equivalentes de contraste. Em dark, usa os valores do design. */
-:root,
-.light {
-  /* CDS background layers */
-  --cds-bg-layer-01: #ffffff;
-  --cds-bg-layer-02: #f0f2f4;
-  --cds-bg-layer-03: #e4e8eb;
-
-  /* CDS border */
-  --cds-border-subtle: #e0e4e7;
-
-  /* CDS text */
-  --cds-text-primary:   #111416;
-  --cds-text-secondary: #4a5568;
-  --cds-brand-text:     #e06b00;
-
-  /* CRM foreground */
-  --crm-fg-neutral-weak:   #6b7a86;
-  --crm-fg-neutral-strong: #1a2127;
-  --crm-fg-primary-default:#e06b00;
-
-  /* CRM surface */
-  --crm-surface-lower:  #e2e6e9;
-  --crm-search-bg:      #f3f4f6;
-  --crm-search-border:  #d1d5db;
-
-  /* CRM buttons */
-  --crm-btn-primary-bg:   #e69400;
-  --crm-btn-primary-text: #14171a;
-
-  /* CDS border-radius */
-  --cds-radius-sm: 4px;
-}
-
-/* ─── Semantic tokens — Dark mode ──────────────────────────────────────────── */
+/* ─── Tier 2: Semantic — DARK MODE ─────────────────────────────────────── */
 .dark, [data-theme="dark"] {
-  /* CDS background layers — valores reais do Figma */
-  --cds-bg-layer-01: #121416;
-  --cds-bg-layer-02: #1f252a;
-  --cds-bg-layer-03: #353e45;
+  /* background */
+  --cds-color-background-layer-01: var(--cds-primitive-neutral-950);
+  --cds-color-background-layer-02: var(--cds-primitive-neutral-900);
+  --cds-color-background-layer-03: var(--cds-primitive-neutral-800);
+  --cds-color-background-field:    var(--cds-primitive-neutral-900);
+  --cds-color-background-hover:    var(--cds-primitive-neutral-800);
+  --cds-color-background-pressed:  var(--cds-primitive-neutral-700);
+  --cds-color-background-disabled: var(--cds-primitive-neutral-800);
+  --cds-color-background-inverse:  var(--cds-primitive-neutral-50);
 
-  /* CDS border */
-  --cds-border-subtle: #353e45;
+  /* text */
+  --cds-color-text-primary:     var(--cds-primitive-neutral-50);
+  --cds-color-text-secondary:   var(--cds-primitive-neutral-300);
+  --cds-color-text-placeholder: var(--cds-primitive-neutral-500);
+  --cds-color-text-disabled:    var(--cds-primitive-neutral-700);
+  --cds-color-text-on-color:    var(--cds-primitive-neutral-950);
+  --cds-color-text-on-brand:    var(--cds-primitive-neutral-950);
+  --cds-color-text-inverse:     var(--cds-primitive-neutral-900);
+  --cds-color-text-danger:      var(--cds-primitive-red-300);
 
-  /* CDS text */
-  --cds-text-primary:   #f4f7fa;
-  --cds-text-secondary: #bcc6cd;
-  --cds-brand-text:     #feba63;
+  /* icon */
+  --cds-color-icon-primary:   var(--cds-primitive-neutral-50);
+  --cds-color-icon-secondary: var(--cds-primitive-neutral-300);
+  --cds-color-icon-disabled:  var(--cds-primitive-neutral-700);
+  --cds-color-icon-on-color:  var(--cds-primitive-neutral-950);
+  --cds-color-icon-on-brand:  var(--cds-primitive-neutral-950);
+  --cds-color-icon-inverse:   var(--cds-primitive-neutral-900);
+  --cds-color-icon-danger:    var(--cds-primitive-red-300);
 
-  /* CRM foreground */
-  --crm-fg-neutral-weak:    #9eaab3;
-  --crm-fg-neutral-strong:  #eef0f2;
-  --crm-fg-primary-default: #ffbb40;
+  /* border */
+  --cds-color-border-subtle:      var(--cds-primitive-neutral-800);
+  --cds-color-border-strong:      var(--cds-primitive-neutral-500);
+  --cds-color-border-interactive: var(--cds-primitive-brand-400);
+  --cds-color-border-disabled:    var(--cds-primitive-neutral-700);
+  --cds-color-border-focus:       var(--cds-primitive-blue-400);
 
-  /* CRM surface */
-  --crm-surface-lower:  #e2e6e9;
-  --crm-search-bg:      #22272b;
-  --crm-search-border:  #3d464d;
+  /* brand */
+  --cds-color-brand-background:         var(--cds-primitive-brand-500);
+  --cds-color-brand-background-hover:   var(--cds-primitive-brand-400);
+  --cds-color-brand-background-pressed: var(--cds-primitive-brand-300);
+  --cds-color-brand-text:               var(--cds-primitive-brand-300);
 
-  /* CRM buttons */
-  --crm-btn-primary-bg:   #e69400;
-  --crm-btn-primary-text: #14171a;
-
-  /* CDS border-radius */
-  --cds-radius-sm: 4px;
-}
-
-.dark, [data-theme="dark"] {
-  /* Background */
-  --color-bg-primary:   var(--primitive-neutral-950);
-  --color-bg-secondary: var(--primitive-neutral-900);
-  --color-bg-tertiary:  var(--primitive-neutral-800);
-  --color-bg-overlay:   rgba(0, 0, 0, 0.64);
-
-  /* Surface */
-  --color-surface-1: var(--primitive-neutral-900);
-  --color-surface-2: var(--primitive-neutral-800);
-  --color-surface-3: var(--primitive-neutral-700);
-
-  /* Border */
-  --color-border-subtle:  var(--primitive-neutral-800);
-  --color-border-default: var(--primitive-neutral-700);
-  --color-border-strong:  var(--primitive-neutral-500);
-
-  /* Text */
-  --color-text-primary:   var(--primitive-neutral-50);
-  --color-text-secondary: var(--primitive-neutral-300);
-  --color-text-tertiary:  var(--primitive-neutral-500);
-  --color-text-disabled:  var(--primitive-neutral-600);
-  --color-text-inverse:   var(--primitive-neutral-900);
-
-  /* Brand */
-  --color-brand-default: var(--primitive-brand-400);
-  --color-brand-hover:   var(--primitive-brand-300);
-  --color-brand-subtle:  var(--primitive-brand-900);
-
-  /* Status */
-  --color-status-success:        var(--primitive-green-500);
-  --color-status-warning:        var(--primitive-yellow-500);
-  --color-status-error:          var(--primitive-red-500);
-  --color-status-info:           var(--primitive-blue-500);
-  --color-status-success-subtle: var(--primitive-green-900);
-  --color-status-warning-subtle: var(--primitive-yellow-900);
-  --color-status-error-subtle:   var(--primitive-red-900);
-  --color-status-info-subtle:    var(--primitive-blue-900);
+  /* support */
+  --cds-color-support-success:        var(--cds-primitive-green-400);
+  --cds-color-support-success-subtle: var(--cds-primitive-green-900);
+  --cds-color-support-danger:         var(--cds-primitive-red-600);
+  --cds-color-support-danger-subtle:  var(--cds-primitive-red-900);
+  --cds-color-support-warning:        var(--cds-primitive-yellow-400);
+  --cds-color-support-warning-subtle: var(--cds-primitive-yellow-900);
+  --cds-color-support-info:           var(--cds-primitive-blue-400);
+  --cds-color-support-info-subtle:    var(--cds-primitive-blue-900);
 }

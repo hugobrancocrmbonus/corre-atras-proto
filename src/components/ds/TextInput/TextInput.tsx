@@ -52,7 +52,7 @@ export function TextInput({ label, value, onChange, placeholder, width = 140, ma
     <div style={{ display: 'flex', flexDirection: 'column', width }}>
       {label && (
         <div style={{ paddingBottom: 8 }}>
-          <span style={{ fontSize: 12, fontWeight: 500, lineHeight: '16px', color: 'var(--crm-fg-neutral-strong)', whiteSpace: 'nowrap' }}>
+          <span style={{ fontSize: 12, fontWeight: 500, lineHeight: '16px', color: 'var(--cds-color-text-primary)', whiteSpace: 'nowrap' }}>
             {label}
           </span>
         </div>
@@ -65,14 +65,14 @@ export function TextInput({ label, value, onChange, placeholder, width = 140, ma
         disabled={disabled}
         style={{
           height: 48,
-          backgroundColor: 'var(--crm-bg-surface-lower, #22272b)',
-          border: '1px solid var(--crm-border-moderate, #3d464d)',
+          backgroundColor: 'var(--cds-color-background-layer-02, #22272b)',
+          border: '1px solid var(--cds-color-border-subtle, #3d464d)',
           borderRadius: 4,
           padding: '0 16px',
           fontSize: 14,
           fontWeight: 400,
           lineHeight: '20px',
-          color: 'var(--crm-fg-neutral-strong)',
+          color: 'var(--cds-color-text-primary)',
           outline: 'none',
           width: '100%',
           boxSizing: 'border-box',
@@ -81,7 +81,7 @@ export function TextInput({ label, value, onChange, placeholder, width = 140, ma
           fontFamily: 'inherit',
         }}
         onFocus={e => { if (!disabled) e.currentTarget.style.borderColor = '#ffbb40' }}
-        onBlur={e => { e.currentTarget.style.borderColor = 'var(--crm-border-moderate, #3d464d)' }}
+        onBlur={e => { e.currentTarget.style.borderColor = 'var(--cds-color-border-subtle, #3d464d)' }}
       />
     </div>
   )

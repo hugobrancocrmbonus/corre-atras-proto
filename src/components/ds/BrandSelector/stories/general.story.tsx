@@ -19,7 +19,7 @@ const meta: Meta<typeof BrandSelector> = {
   },
   decorators: [
     (Story) => (
-      <div style={{ display: 'inline-flex', backgroundColor: 'var(--cds-bg-layer-01, #121416)', padding: 16 }}>
+      <div style={{ display: 'inline-flex', backgroundColor: 'var(--cds-color-background-layer-01, #121416)', padding: 16 }}>
         <Story />
       </div>
     ),

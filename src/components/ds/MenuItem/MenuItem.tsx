@@ -16,8 +16,8 @@ export function MenuItem({ icon, label, active = false, expanded = false, onClic
         title={!expanded ? label : undefined}
         className="flex items-center h-[64px] w-full border-none cursor-pointer overflow-hidden"
         style={{
-          borderRadius: 'var(--cds-radius-sm)',
-          backgroundColor: active ? 'var(--cds-bg-layer-02)' : 'transparent',
+          borderRadius: 'var(--cds-border-radius-sm)',
+          backgroundColor: active ? 'var(--cds-color-background-layer-02)' : 'transparent',
         }}
       >
         {/* Icon — sempre 64×64 */}
@@ -27,7 +27,7 @@ export function MenuItem({ icon, label, active = false, expanded = false, onClic
         >
           <span
             style={{
-              color: active ? 'var(--cds-brand-text)' : 'var(--crm-fg-neutral-weak)',
+              color: active ? 'var(--cds-color-brand-text)' : 'var(--cds-color-icon-secondary)',
               display: 'flex',
             }}
           >
@@ -40,7 +40,7 @@ export function MenuItem({ icon, label, active = false, expanded = false, onClic
           <div className="flex-1 min-w-0 flex items-center">
             <span
               className="text-[14px] font-normal leading-[1.8] tracking-[0.28px] truncate"
-              style={{ color: 'var(--cds-text-primary)' }}
+              style={{ color: 'var(--cds-color-text-primary)' }}
             >
               {label}
             </span>
