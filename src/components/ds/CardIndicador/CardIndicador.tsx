@@ -1,4 +1,4 @@
-const ICON_SRC = 'https://www.figma.com/api/mcp/asset/bfdf3612-9572-495f-ade2-f3744e9bb5fe'
+const ICON_SRC = `${import.meta.env.BASE_URL}brand/card-default-icon.png`
 
 export interface CardIndicadorProps {
   title: string

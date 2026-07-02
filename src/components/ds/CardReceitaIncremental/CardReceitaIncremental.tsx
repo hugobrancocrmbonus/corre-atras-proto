@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 
-const ICON_SRC = 'https://www.figma.com/api/mcp/asset/3c774f7c-d631-4eae-a6c0-1822514ab1b4'
+const ICON_SRC = `${import.meta.env.BASE_URL}brand/receita-icon.png`
 
 const MONTHS = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
 const VALUES = [0.55, 0.61, 0.58, 0.72, 0.81, 0.65, 0.90, 0.95, 0.78, 0.70, 0.63, 0.75]

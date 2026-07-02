@@ -12,7 +12,7 @@ import { ConsultorPage } from './pages/ConsultorPage'
 type Page = 'agents' | 'campaign-list' | 'create-campaign' | 'corre-atras' | 'consultor'
 
 const MOCK_BRANDS: Brand[] = [
-  { id: '1', name: 'Vivara',       csResponsavel: 'Ana Souza',   logoSrc: 'https://www.figma.com/api/mcp/asset/ed5eb695-3595-48dd-93e0-e44987eaafd9' },
+  { id: '1', name: 'Vivara',       csResponsavel: 'Ana Souza',   logoSrc: `${import.meta.env.BASE_URL}brand/vivara.png` },
   { id: '2', name: 'Corello',      csResponsavel: 'Bruno Lima' },
   { id: '3', name: 'Shoulder',     csResponsavel: 'Carla Dias' },
   { id: '4', name: 'Arezzo',       csResponsavel: 'Diego Mota' },

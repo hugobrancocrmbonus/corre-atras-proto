@@ -462,7 +462,7 @@ function ConfiguracoesTab() {
               {/* WhatsApp header */}
               <div style={{ backgroundColor: '#003b38', padding: '16px 43px', display: 'flex', alignItems: 'center', gap: 16, flexShrink: 0 }}>
                 <div style={{ width: 40, height: 40, borderRadius: '50%', backgroundColor: '#fff', overflow: 'hidden', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img src="https://www.figma.com/api/mcp/asset/2c869853-227b-4858-8742-195f7edbc29e" alt="Vivara" style={{ width: '110%', height: '110%', objectFit: 'cover' }} />
+                  <img src={`${import.meta.env.BASE_URL}brand/vivara-avatar.png`} alt="Vivara" style={{ width: '110%', height: '110%', objectFit: 'cover' }} />
                 </div>
                 <span style={{ fontSize: 16, fontWeight: 500, lineHeight: '24px', color: '#fff' }}>Vivara</span>
               </div>

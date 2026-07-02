@@ -150,7 +150,7 @@ function WhatsAppPreview() {
       <div style={{ backgroundColor: '#003b38', padding: '16px 43px', display: 'flex', alignItems: 'center', gap: 16 }}>
         <div style={{ width: 40, height: 40, borderRadius: '50%', backgroundColor: '#fff', overflow: 'hidden', flexShrink: 0 }}>
           <img
-            src="https://www.figma.com/api/mcp/asset/ed5eb695-3595-48dd-93e0-e44987eaafd9"
+            src={`${import.meta.env.BASE_URL}brand/vivara-avatar.png`}
             alt="Vivara"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />

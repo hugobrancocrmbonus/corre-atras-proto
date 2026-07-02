@@ -1,7 +1,7 @@
 import { BrandSelector } from '@ds/BrandSelector/BrandSelector'
 import { Avatar } from '@ds/Avatar/Avatar'
 
-const imgCrmBonusLogo = "https://www.figma.com/api/mcp/asset/4ff3529b-64d8-41c1-970c-8712e6b57590"
+const imgCrmBonusLogo = `${import.meta.env.BASE_URL}brand/crmbonus-logo.png`
 
 export interface BreadcrumbItem {
   label: string

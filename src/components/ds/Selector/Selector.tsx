@@ -1,4 +1,4 @@
-const imgBrandPlaceholder = "https://www.figma.com/api/mcp/asset/234fd857-cd52-42bb-a463-dfa596d390af"
+const imgBrandPlaceholder = `${import.meta.env.BASE_URL}brand/brand-placeholder.png`
 
 export interface SelectorProps {
   brandName?: string
