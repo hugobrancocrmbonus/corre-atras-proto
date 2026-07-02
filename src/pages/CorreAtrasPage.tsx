@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Tabs }        from '@ds/Tabs/Tabs'
+import { SelectInput } from '@ds/SelectInput/SelectInput'
 import { Macrocard }   from '@ds/Macrocard/Macrocard'
 import { CardReceitaIncremental }    from '@ds/CardReceitaIncremental/CardReceitaIncremental'
 import { Table, StatusCell }         from '@ds/Table/Table'
