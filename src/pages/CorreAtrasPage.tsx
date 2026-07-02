@@ -600,11 +600,11 @@ export function CorreAtrasPage() {
             title="Resultados do período filtrado"
             tagLabel="Rodou às 9h02 · 50 clientes selecionados"
             cards={[
-              { title: 'Selecionados', value: '50',  change: '+12%' },
-              { title: 'Enviados',     value: '47',  change: '+8%' },
-              { title: 'Ativados',     value: '12',  change: '+24%' },
-              { title: 'Agendados',    value: '8',   change: '+5%' },
-              { title: 'Resgatados',   value: '1',   change: '+100%' },
+              { title: 'Selecionados',    value: '100', change: '00%', iconSrc: '/correatras/icons/icon-target.png' },
+              { title: 'Enviados',        value: '114', change: '00%', iconSrc: '/correatras/icons/icon-message.png' },
+              { title: 'Ativados',        value: '24',  change: '00%', iconSrc: '/correatras/icons/icon-calendar.png' },
+              { title: 'Resgatados',      value: '3',   change: '00%', iconSrc: '/correatras/icons/icon-check.png' },
+              { title: 'Não resgataram',  value: '1',   change: '00%', iconSrc: '/correatras/icons/icon-fail.png' },
             ]}
           />
 
