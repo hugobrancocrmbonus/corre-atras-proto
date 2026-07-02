@@ -602,11 +602,11 @@ export function CorreAtrasPage() {
             title="Resultados dos últimos 90 dias"
             tagLabel="Rodou às 9h02 · 50 clientes selecionados"
             cards={[
-              { title: 'Selecionados',    value: '100', change: '00%', iconSrc: '/correatras/icons/icon-target.png' },
-              { title: 'Enviados',        value: '114', change: '00%', iconSrc: '/correatras/icons/icon-message.png' },
-              { title: 'Ativados',        value: '24',  change: '00%', iconSrc: '/correatras/icons/icon-calendar.png' },
-              { title: 'Resgatados',      value: '3',   change: '00%', iconSrc: '/correatras/icons/icon-check.png' },
-              { title: 'Não resgataram',  value: '1',   change: '00%', iconSrc: '/correatras/icons/icon-fail.png' },
+              { title: 'Selecionados',    value: '100', change: '00%', iconSrc: `${import.meta.env.BASE_URL}icons/icon-target.png` },
+              { title: 'Enviados',        value: '114', change: '00%', iconSrc: `${import.meta.env.BASE_URL}icons/icon-message.png` },
+              { title: 'Ativados',        value: '24',  change: '00%', iconSrc: `${import.meta.env.BASE_URL}icons/icon-calendar.png` },
+              { title: 'Resgatados',      value: '3',   change: '00%', iconSrc: `${import.meta.env.BASE_URL}icons/icon-check.png` },
+              { title: 'Não resgataram',  value: '1',   change: '00%', iconSrc: `${import.meta.env.BASE_URL}icons/icon-fail.png` },
             ]}
           />
 
