@@ -25,16 +25,16 @@ interface ClienteRow {
 }
 
 const MOCK_CLIENTES: ClienteRow[] = [
-  { id: 1,  nome: 'Mariana Cunha',    telefone: '11 91234-5678', perfil: 'Alto valor · Sensível a bônus',  ultimaCompra: '01-07-2023', diasAusente: '352 dias', visitas: 12, ticket: 'R$1.234,00', totalHistorico: 'R$12.340,00', bonus: 'R$247,00', status: 'Resgatado' },
-  { id: 2,  nome: 'Ricardo Oliveira', telefone: '11 92345-6789', perfil: 'Frequente · Ticket alto',        ultimaCompra: '15-08-2023', diasAusente: '307 dias', visitas: 34, ticket: 'R$5.678,00', totalHistorico: 'R$56.780,00', bonus: 'R$236,45', status: 'Reagendado' },
-  { id: 3,  nome: 'Fernanda Lima',    telefone: '11 93456-7890', perfil: 'VIP · Inativa há +9 meses',     ultimaCompra: '20-09-2023', diasAusente: '271 dias', visitas:  9, ticket: 'R$9.012,00', totalHistorico: 'R$90.120,00', bonus: 'R$200,00', status: 'Agendado' },
-  { id: 4,  nome: 'Carlos Souza',     telefone: '11 94567-8901', perfil: 'Regular · Ticket médio',        ultimaCompra: '05-10-2023', diasAusente: '256 dias', visitas: 22, ticket: 'R$3.456,00', totalHistorico: 'R$34.560,00', bonus: 'R$200,00', status: 'Enviado' },
-  { id: 5,  nome: 'Beatriz Alves',    telefone: '11 95678-9012', perfil: 'Alto valor · Recorrente',       ultimaCompra: '10-11-2023', diasAusente: '220 dias', visitas: 18, ticket: 'R$7.890,00', totalHistorico: 'R$78.900,00', bonus: 'R$214,00', status: 'Ativado' },
-  { id: 6,  nome: 'Paulo Mendes',     telefone: '11 96789-0123', perfil: 'Regular · Inativo',             ultimaCompra: '25-11-2023', diasAusente: '205 dias', visitas:  7, ticket: 'R$2.345,00', totalHistorico: 'R$23.450,00', bonus: 'R$200,00', status: 'Enviado' },
-  { id: 7,  nome: 'Juliana Ferreira', telefone: '11 97890-1234', perfil: 'Frequente · Ticket médio',      ultimaCompra: '01-12-2023', diasAusente: '199 dias', visitas: 15, ticket: 'R$6.789,00', totalHistorico: 'R$67.890,00', bonus: 'R$215,00', status: 'Agendado' },
-  { id: 8,  nome: 'Thiago Rocha',     telefone: '11 98901-2345', perfil: 'VIP · Propenso a resgatar',    ultimaCompra: '10-01-2024', diasAusente: '159 dias', visitas: 28, ticket: 'R$4.567,00', totalHistorico: 'R$45.670,00', bonus: 'R$200,00', status: 'Ativado' },
-  { id: 9,  nome: 'Larissa Costa',    telefone: '11 99012-3456', perfil: 'Novo · Alto potencial',         ultimaCompra: '15-01-2024', diasAusente: '154 dias', visitas:  5, ticket: 'R$8.901,00', totalHistorico: 'R$89.010,00', bonus: 'R$200,00', status: 'Enviado' },
-  { id: 10, nome: 'André Pereira',    telefone: '11 90123-4567', perfil: 'Frequente · Sensível a bônus', ultimaCompra: '20-02-2024', diasAusente: '118 dias', visitas: 41, ticket: 'R$1.023,00', totalHistorico: 'R$10.230,00', bonus: 'R$200,00', status: 'Reagendado' },
+  { id: 1,  nome: 'Mariana Cunha',    telefone: '11 91234-5678', perfil: 'Alto valor - Sensível a bônus',  ultimaCompra: '01-07-2023', diasAusente: '352 dias', visitas: 12, ticket: 'R$1.234,00', totalHistorico: 'R$12.340,00', bonus: 'R$247,00', status: 'Resgatado' },
+  { id: 2,  nome: 'Ricardo Oliveira', telefone: '11 92345-6789', perfil: 'Alto valor - Esfriando',         ultimaCompra: '15-08-2023', diasAusente: '307 dias', visitas: 34, ticket: 'R$5.678,00', totalHistorico: 'R$56.780,00', bonus: 'R$236,45', status: 'Reagendado' },
+  { id: 3,  nome: 'Fernanda Lima',    telefone: '11 93456-7890', perfil: 'Fiel - Recompra em janela',      ultimaCompra: '20-09-2023', diasAusente: '271 dias', visitas:  9, ticket: 'R$9.012,00', totalHistorico: 'R$90.120,00', bonus: 'R$200,00', status: 'Agendado' },
+  { id: 4,  nome: 'Carlos Souza',     telefone: '11 94567-8901', perfil: 'Fiel - Sensível a bônus',       ultimaCompra: '05-10-2023', diasAusente: '256 dias', visitas: 22, ticket: 'R$3.456,00', totalHistorico: 'R$34.560,00', bonus: 'R$200,00', status: 'Enviado' },
+  { id: 5,  nome: 'Beatriz Alves',    telefone: '11 95678-9012', perfil: 'Alto valor - Esfriando',         ultimaCompra: '10-11-2023', diasAusente: '220 dias', visitas: 18, ticket: 'R$7.890,00', totalHistorico: 'R$78.900,00', bonus: 'R$214,00', status: 'Ativado' },
+  { id: 6,  nome: 'Paulo Mendes',     telefone: '11 96789-0123', perfil: 'Alto valor - Sensível a bônus', ultimaCompra: '25-11-2023', diasAusente: '205 dias', visitas:  7, ticket: 'R$2.345,00', totalHistorico: 'R$23.450,00', bonus: 'R$200,00', status: 'Enviado' },
+  { id: 7,  nome: 'Juliana Ferreira', telefone: '11 97890-1234', perfil: 'Alto valor - Sensível a bônus', ultimaCompra: '01-12-2023', diasAusente: '199 dias', visitas: 15, ticket: 'R$6.789,00', totalHistorico: 'R$67.890,00', bonus: 'R$215,00', status: 'Agendado' },
+  { id: 8,  nome: 'Thiago Rocha',     telefone: '11 98901-2345', perfil: 'Alto valor - Sensível a bônus', ultimaCompra: '10-01-2024', diasAusente: '159 dias', visitas: 28, ticket: 'R$4.567,00', totalHistorico: 'R$45.670,00', bonus: 'R$200,00', status: 'Ativado' },
+  { id: 9,  nome: 'Larissa Costa',    telefone: '11 99012-3456', perfil: 'Alto valor - Sensível a bônus', ultimaCompra: '15-01-2024', diasAusente: '154 dias', visitas:  5, ticket: 'R$8.901,00', totalHistorico: 'R$89.010,00', bonus: 'R$200,00', status: 'Enviado' },
+  { id: 10, nome: 'André Pereira',    telefone: '11 90123-4567', perfil: 'Alto valor - Sensível a bônus', ultimaCompra: '20-02-2024', diasAusente: '118 dias', visitas: 41, ticket: 'R$1.023,00', totalHistorico: 'R$10.230,00', bonus: 'R$200,00', status: 'Reagendado' },
 ]
 
 const TABS = [
@@ -43,17 +43,27 @@ const TABS = [
 ]
 
 
+const PERFIL_COLORS: { keyword: string; color: string; bg: string }[] = [
+  { keyword: 'esfriando',  color: '#4db6a3', bg: 'rgba(77,182,163,0.2)'  },
+  { keyword: 'recompra',   color: '#4db6a3', bg: 'rgba(77,182,163,0.2)'  },
+  { keyword: 'inativo',    color: '#8896A0', bg: 'rgba(136,150,160,0.15)' },
+]
+
 function PerfilTag({ label }: { label: string }) {
+  const lower = label.toLowerCase()
+  const match = PERFIL_COLORS.find(c => lower.includes(c.keyword))
+  const color = match?.color ?? '#ffbb40'
+  const bg    = match?.bg    ?? 'rgba(230,148,0,0.2)'
   return (
     <div style={{
       display: 'inline-flex', alignItems: 'center',
       height: 32, padding: '0 12px',
-      backgroundColor: 'rgba(230,148,0,0.2)',
-      border: '1px solid #ffbb40',
+      backgroundColor: bg,
+      border: `1px solid ${color}`,
       borderRadius: 9999,
       whiteSpace: 'nowrap',
     }}>
-      <span style={{ fontSize: 12, fontWeight: 500, color: '#ffbb40', lineHeight: '16px' }}>
+      <span style={{ fontSize: 12, fontWeight: 500, color, lineHeight: '16px' }}>
         {label}
       </span>
     </div>
