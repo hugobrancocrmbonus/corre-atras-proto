@@ -45,14 +45,18 @@ export function Selector({
             width: 56,
             height: 56,
             borderRadius: 4,
-            backgroundColor: 'var(--cds-bg-layer-01, #121416)',
+            backgroundColor: '#fff',
             overflow: 'hidden',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: 6,
           }}
         >
           <img
             src={logoSrc ?? imgBrandPlaceholder}
             alt={brandName}
-            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', borderRadius: 4 }}
+            style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
           />
         </div>
 

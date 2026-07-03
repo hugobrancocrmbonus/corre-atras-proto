@@ -12,14 +12,15 @@ import { ConsultorPage } from './pages/ConsultorPage'
 
 type Page = 'agents' | 'campaign-list' | 'create-campaign' | 'corre-atras' | 'consultor' | 'message-details'
 
+const B = import.meta.env.BASE_URL
 const MOCK_BRANDS: Brand[] = [
-  { id: '1', name: 'Vivara',       csResponsavel: 'Ana Souza',   logoSrc: `${import.meta.env.BASE_URL}brand/vivara.png` },
-  { id: '2', name: 'Corello',      csResponsavel: 'Bruno Lima' },
-  { id: '3', name: 'Shoulder',     csResponsavel: 'Carla Dias' },
-  { id: '4', name: 'Arezzo',       csResponsavel: 'Diego Mota' },
-  { id: '5', name: 'Chilli Beans', csResponsavel: 'Elisa Rocha' },
-  { id: '6', name: 'Farm',         csResponsavel: 'Felipe Neto' },
-  { id: '7', name: 'Reserva',      csResponsavel: 'Gabi Torres' },
+  { id: '1', name: 'Vivara',       csResponsavel: 'Ana Souza',   logoSrc: `${B}brand/vivara.png` },
+  { id: '2', name: 'Corello',      csResponsavel: 'Bruno Lima',  logoSrc: `${B}brand/corello.svg` },
+  { id: '3', name: 'Shoulder',     csResponsavel: 'Carla Dias',  logoSrc: `${B}brand/shoulder.png` },
+  { id: '4', name: 'Arezzo',       csResponsavel: 'Diego Mota',  logoSrc: `${B}brand/arezzo.png` },
+  { id: '5', name: 'Chilli Beans', csResponsavel: 'Elisa Rocha', logoSrc: `${B}brand/chillibeans.png` },
+  { id: '6', name: 'Farm',         csResponsavel: 'Felipe Neto', logoSrc: `${B}brand/farm.svg` },
+  { id: '7', name: 'Reserva',      csResponsavel: 'Gabi Torres', logoSrc: `${B}brand/reserva.png` },
 ]
 
 function IconAgentes() {
