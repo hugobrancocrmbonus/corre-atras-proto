@@ -26,8 +26,6 @@ const STATUS_COLORS: Record<string, string> = {
   Enviado:   '#7a8994',
   Ativado:   '#4db6a3',
   Resgatado: '#81d147',
-  Agendado:  '#ffbb40',
-  Reagendado:'#ffbb40',
 }
 
 function SearchIcon() {
