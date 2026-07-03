@@ -1,9 +1,16 @@
+import { useEffect, useRef, useState, type ReactNode } from 'react'
+
 export interface TableColumn<T> {
   key: keyof T | string
   label: string
   width?: number | string
-  render?: (row: T) => React.ReactNode
+  render?: (row: T) => ReactNode
   align?: 'left' | 'center' | 'right'
+}
+
+export interface TableRowAction<T> {
+  label: string
+  onClick: (row: T) => void
 }
 
 export interface TableProps<T extends Record<string, unknown>> {
@@ -11,6 +18,8 @@ export interface TableProps<T extends Record<string, unknown>> {
   rows: T[]
   onSearch?: (q: string) => void
   searchQuery?: string
+  /** Itens do menu (kebab) por linha. Se omitido, o kebab não abre menu. */
+  rowActions?: TableRowAction<T>[]
 }
 
 const STATUS_COLORS: Record<string, string> = {
@@ -38,7 +47,19 @@ function FunnelIcon() {
   )
 }
 
-export function Table<T extends Record<string, unknown>>({ columns, rows, onSearch, searchQuery = '' }: TableProps<T>) {
+export function Table<T extends Record<string, unknown>>({ columns, rows, onSearch, searchQuery = '', rowActions }: TableProps<T>) {
+  const [openRow, setOpenRow] = useState<number | null>(null)
+  const menuRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (openRow === null) return
+    function onDocClick(e: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) setOpenRow(null)
+    }
+    document.addEventListener('mousedown', onDocClick)
+    return () => document.removeEventListener('mousedown', onDocClick)
+  }, [openRow])
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
       {/* Header toolbar */}
@@ -206,6 +227,7 @@ export function Table<T extends Record<string, unknown>>({ columns, rows, onSear
                     height: 64,
                     textAlign: 'center',
                     borderBottom: '1px solid var(--cds-border-subtle)',
+                    position: 'relative',
                   }}
                 >
                   <button
@@ -225,10 +247,53 @@ export function Table<T extends Record<string, unknown>>({ columns, rows, onSear
                     }}
                     onMouseEnter={e => (e.currentTarget.style.color = 'var(--crm-fg-neutral-strong)')}
                     onMouseLeave={e => (e.currentTarget.style.color = 'var(--crm-fg-neutral-weak)')}
+                    onClick={() => rowActions?.length && setOpenRow(openRow === ri ? null : ri)}
                     aria-label="Ações"
                   >
                     ⋮
                   </button>
+
+                  {openRow === ri && rowActions?.length ? (
+                    <div
+                      ref={menuRef}
+                      style={{
+                        position: 'absolute',
+                        top: 48,
+                        right: 12,
+                        zIndex: 20,
+                        minWidth: 160,
+                        backgroundColor: 'var(--cds-bg-layer-02, #22272b)',
+                        border: '1px solid var(--cds-border-subtle, #353e45)',
+                        borderRadius: 8,
+                        boxShadow: '0 8px 24px -6px rgba(0,0,0,0.5)',
+                        overflow: 'hidden',
+                        textAlign: 'left',
+                      }}
+                    >
+                      {rowActions.map(action => (
+                        <button
+                          key={action.label}
+                          onClick={() => { setOpenRow(null); action.onClick(row) }}
+                          style={{
+                            display: 'block',
+                            width: '100%',
+                            textAlign: 'left',
+                            padding: '10px 16px',
+                            background: 'none',
+                            border: 'none',
+                            cursor: 'pointer',
+                            fontSize: 13,
+                            color: 'var(--cds-text-primary)',
+                            fontFamily: 'inherit',
+                          }}
+                          onMouseEnter={e => (e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)')}
+                          onMouseLeave={e => (e.currentTarget.style.backgroundColor = 'transparent')}
+                        >
+                          {action.label}
+                        </button>
+                      ))}
+                    </div>
+                  ) : null}
                 </td>
               </tr>
             ))}

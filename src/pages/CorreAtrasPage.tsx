@@ -10,7 +10,7 @@ import { Textarea }                  from '@ds/Textarea/Textarea'
 
 // ── mock data ────────────────────────────────────────────────────────────────
 
-interface ClienteRow {
+export interface ClienteRow {
   id: number
   nome: string
   telefone: string
@@ -50,7 +50,7 @@ const PERFIL_COLORS: { keyword: string; color: string; bg: string }[] = [
   { keyword: 'inativo',    color: '#8896A0', bg: 'rgba(136,150,160,0.15)' },
 ]
 
-function PerfilTag({ label }: { label: string }) {
+export function PerfilTag({ label }: { label: string }) {
   const lower = label.toLowerCase()
   const match = PERFIL_COLORS.find(c => lower.includes(c.keyword))
   const color = match?.color ?? '#ffbb40'
@@ -556,7 +556,11 @@ function ConfiguracoesTab() {
 
 // ── component ─────────────────────────────────────────────────────────────────
 
-export function CorreAtrasPage() {
+interface CorreAtrasPageProps {
+  onOpenMessage?: (client: ClienteRow) => void
+}
+
+export function CorreAtrasPage({ onOpenMessage }: CorreAtrasPageProps = {}) {
   const [activeTab,   setActiveTab]   = useState('visao-geral')
   const [searchQuery, setSearchQuery] = useState('')
 
@@ -633,6 +637,7 @@ export function CorreAtrasPage() {
               rows={filtered}
               onSearch={setSearchQuery}
               searchQuery={searchQuery}
+              rowActions={onOpenMessage ? [{ label: 'Detalhes', onClick: onOpenMessage }] : undefined}
             />
           </div>
 

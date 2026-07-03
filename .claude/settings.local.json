@@ -31,7 +31,13 @@
       "Bash(git remote *)",
       "Bash(git push *)",
       "mcp__ca35b8f3-4bd8-46d3-a2f8-3c8a05199dd4__search",
-      "Bash(xargs perl -pi -e ' *)"
+      "Bash(xargs perl -pi -e ' *)",
+      "Bash(ping -c 3 github.com)",
+      "Bash(curl -s --max-time 5 https://api.github.com)",
+      "Bash(git checkout *)",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(item['text'][:3000]\\) for item in data if item['type']=='text']\")",
+      "mcp__da6f421c-a068-49e7-89cd-259f108161e5__get_code_connect_suggestions",
+      "mcp__da6f421c-a068-49e7-89cd-259f108161e5__send_code_connect_mappings"
     ]
   }
 }

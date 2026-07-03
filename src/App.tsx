@@ -6,10 +6,11 @@ import { BrandDrawer, type Brand } from '@ds/BrandDrawer/BrandDrawer'
 import { AgentsPage } from './pages/AgentsPage'
 import { CampaignListPage } from './pages/CampaignListPage'
 import { CreateCampaignPage } from './pages/CreateCampaignPage'
-import { CorreAtrasPage } from './pages/CorreAtrasPage'
+import { CorreAtrasPage, type ClienteRow } from './pages/CorreAtrasPage'
+import { MessageDetailsPage } from './pages/MessageDetailsPage'
 import { ConsultorPage } from './pages/ConsultorPage'
 
-type Page = 'agents' | 'campaign-list' | 'create-campaign' | 'corre-atras' | 'consultor'
+type Page = 'agents' | 'campaign-list' | 'create-campaign' | 'corre-atras' | 'consultor' | 'message-details'
 
 const MOCK_BRANDS: Brand[] = [
   { id: '1', name: 'Vivara',       csResponsavel: 'Ana Souza',   logoSrc: `${import.meta.env.BASE_URL}brand/vivara.png` },
@@ -39,7 +40,7 @@ function IconConsultor() {
   )
 }
 
-function breadcrumbFor(page: Page, nav: { toCampaignList: () => void; toAgents: () => void }) {
+function breadcrumbFor(page: Page, nav: { toCampaignList: () => void; toAgents: () => void; toCorreAtras: () => void }) {
   const home   = { label: 'Página inicial' }
   const agents = { label: 'Agentes IA', onClick: nav.toAgents }
   const corre  = { label: 'Corre Atrás', onClick: nav.toCampaignList }
@@ -49,6 +50,7 @@ function breadcrumbFor(page: Page, nav: { toCampaignList: () => void; toAgents: 
     case 'campaign-list':   return [home, agents, { label: 'Corre Atrás' }]
     case 'create-campaign': return [home, agents, corre, { label: 'Criar ação' }]
     case 'corre-atras':     return [home, agents, corre, { label: 'Última chance – Corre atrás' }]
+    case 'message-details': return [home, agents, corre, { label: 'Última chance – Corre atrás', onClick: nav.toCorreAtras }, { label: 'Detalhes do envio' }]
     case 'consultor':       return [home, { label: 'Consultor IA' }]
   }
 }
@@ -60,6 +62,7 @@ export function App() {
   const [activeBrand, setActiveBrand] = useState<Brand | undefined>(MOCK_BRANDS[0])
   const [activeNav, setActiveNav]     = useState('agents')
   const [page, setPage]               = useState<Page>('agents')
+  const [selectedClient, setSelectedClient] = useState<ClienteRow | null>(null)
 
   function toggleTheme() {
     const next = theme === 'light' ? 'dark' : 'light'
@@ -74,6 +77,7 @@ export function App() {
   const nav = {
     toAgents:       () => { setActiveNav('agents'); setPage('agents') },
     toCampaignList: () => setPage('campaign-list'),
+    toCorreAtras:   () => setPage('corre-atras'),
   }
 
   const navItems = [
@@ -112,7 +116,15 @@ export function App() {
           />
         )
       case 'corre-atras':
-        return <CorreAtrasPage />
+        return (
+          <CorreAtrasPage
+            onOpenMessage={client => { setSelectedClient(client); setPage('message-details') }}
+          />
+        )
+      case 'message-details':
+        return selectedClient
+          ? <MessageDetailsPage client={selectedClient} onBack={() => setPage('corre-atras')} />
+          : <CorreAtrasPage onOpenMessage={client => { setSelectedClient(client); setPage('message-details') }} />
       case 'consultor':
         return <ConsultorPage />
     }
