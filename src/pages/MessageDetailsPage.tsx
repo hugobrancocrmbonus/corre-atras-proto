@@ -39,8 +39,6 @@ function buildMessage(client: ClienteRow): string {
 
 Faz um tempão que você não compra conosco e queremos muito te receber novamente na loja. Que tal conhecer a nossa coleção?
 
-Importante: esse bônus só será ativado se você clicar em ATIVAR abaixo e selecionar a semana em que poderia vir à loja.
-
 *consulte termos de uso em loja.`
 }
 

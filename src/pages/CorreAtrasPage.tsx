@@ -123,7 +123,7 @@ const TEMPLATE_OPTIONS = [
 ]
 
 const TEMPLATE_MESSAGES: Record<string, string> = {
-  padrao: `Ooi, {NOME}! Aqui é da {LOJA} e temos presente para você: um bônus de até R$ {VALORBONUS}!\n\nFaz um tempão que você não compra conosco e queremos muito te receber novamente na loja. Que tal conhecer a nossa coleção?\n\nImportante: esse bônus só será ativado se você clicar em ATIVAR abaixo e selecionar a semana em que poderia vir à loja — o bônus é exclusivo e será válido apenas nos dias da semana que você escolher.\n\n*consulte termos de uso em loja.`,
+  padrao: `Ooi, {NOME}! Aqui é da {LOJA} e temos presente para você: um bônus de até R$ {VALORBONUS}!\n\nFaz um tempão que você não compra conosco e queremos muito te receber novamente na loja. Que tal conhecer a nossa coleção?\n\n*consulte termos de uso em loja.`,
   reativacao: `Olá, {NOME}! Sentimos sua falta na {LOJA}. Temos um bônus especial de R$ {VALORBONUS} esperando por você!\n\nVenha nos visitar e aproveite esta oferta exclusiva.\n\n*consulte termos de uso em loja.`,
   oferta: `{NOME}, temos uma oferta incrível para você na {LOJA}! Bônus de R$ {VALORBONUS} válido esta semana.\n\nNão perca essa oportunidade!\n\n*consulte termos de uso em loja.`,
   personalizado: '',
