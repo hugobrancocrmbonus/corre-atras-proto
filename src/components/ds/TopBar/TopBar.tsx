@@ -104,7 +104,7 @@ export function TopBar({
                       borderRadius: 'var(--cds-radius-sm)',
                       background: 'none', border: 'none', cursor: 'pointer',
                       fontSize: 12, fontWeight: 400, lineHeight: '16px', whiteSpace: 'nowrap',
-                      color: 'var(--crm-fg-primary-default)',
+                      color: 'var(--crm-fg-neutral-strong)',
                     }}
                   >
                     {item.label}
@@ -120,8 +120,8 @@ export function TopBar({
                     <span
                       style={{
                         fontSize: 12, lineHeight: '16px', whiteSpace: 'nowrap',
-                        fontWeight: isLast ? 600 : 400,
-                        color: isLast ? 'var(--crm-fg-neutral-strong)' : 'var(--crm-fg-neutral-weak)',
+                        fontWeight: 400,
+                        color: 'var(--crm-fg-neutral-weak)',
                       }}
                     >
                       {item.label}
